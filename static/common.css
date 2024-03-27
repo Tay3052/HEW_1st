@@ -1,0 +1,718 @@
+@charset "utf-8";
+
+
+/* 共通のスタイル */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header,
+hgroup, menu, nav, section,
+time, mark, audio, video , main {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+article, aside, dialog, figure, footer, header,
+hgroup, nav, section {
+  display:block;
+}
+
+a {
+  margin:0;
+  padding:0;
+  border:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+body{
+  background: black;
+  color: #fff;
+  line-height:1;
+}
+
+/* 画像の下の隙間を無くす */
+img{
+  vertical-align: bottom;
+}
+
+/* padiingとborderを内側に入れる */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header,
+hgroup, menu, nav, section,
+time, mark, audio, video , main {
+  box-sizing: border-box;
+}
+
+article, aside, dialog, figure, footer, header,
+hgroup, nav, section {
+  display:block;
+}
+
+nav ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  border:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+mark {
+  background-color:#ff9;
+  color:#000;
+  font-style:italic;
+  font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted #000;
+  cursor:help;
+}
+
+body{
+  line-height: 1.2rem;
+}
+
+button a{
+  text-decoration: none;
+  color: #000;
+}
+
+a{
+  text-decoration: none;
+  color: red;
+}
+
+
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  background-image: url("./header3.jpg");
+  background-size: cover;
+
+}
+
+/* @font-face{
+  src: url('../fonts/BAUHS93.TTF');
+  font-family: 'myFont';
+} */
+
+header h1{
+  text-shadow: 0px 0px 15px #000f;
+  font-size: 10vw;
+  font-family: 'Dancing Script', cursive;
+  color: #fff;
+  text-align: center;
+  margin: 300px 0;
+}
+
+header nav#global-nav{
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 0;
+  line-height: 0;
+  padding: 20px 0 20px 0;
+  background-color: #0008;
+}
+
+header nav#global-nav ul{
+  display: flex;
+  justify-content: flex-end;
+  margin: -3px 0;
+  list-style: none;
+}
+header nav#global-nav ul li{
+  margin: 0 25px 0 0;
+}
+
+header nav#global-nav ul li a{
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  transition: top linear 0.3s;
+}
+
+header nav#global-nav ul li a:hover{
+  top: -3px;
+  opacity: 0.3;
+}
+
+div#wrap{
+  display: flex;
+  flex-wrap: wrap;
+  width: 1000px;
+  margin: 0 auto 0 auto;
+}
+
+div#subtitle{
+  width: 100%;
+  padding: 20px 0 20px 0;
+  text-align: center;
+  font-size: 2rem;
+  font-family: serif;
+  line-height: 6rem;
+}
+main#top{
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+}
+main#top section{
+  width: 33.3333%;
+  padding: 30px 5% 30px 0;
+}
+
+
+main#login div{
+  margin: 10px 0;
+}
+
+main#top section h2{
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+/* main#top section figure{} */
+main#top section figure img{
+  max-width: 100%;
+  margin: 0 0 20px 0;
+  border-radius: 30px;
+}
+
+main#top section figure img:hover{
+  transform:scale(1.2,1.2);
+  transition:1s all;
+}
+
+
+/* main#top section div{} */
+main#top section p{
+  line-height: 1.4rem;
+}
+
+main:not(#top){
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+main:not(#top) h2{
+  font-size: 2rem;
+  margin: 0 0 30px 0;
+}
+
+main#login form{
+  margin: 0 0 50px 0;
+}
+
+main#register div{
+  margin: 0 auto 0 auto;
+}
+
+main#register div form{
+  text-align: left;
+
+}
+
+main section#chat_see{
+  border-bottom: 1px solid #fff;
+  margin: 0 0 30px 0;
+}
+
+main section#chat_see h3{
+  text-align: left;
+  font-size: 1.5rem;
+  padding: 0 0 0 30px;
+  margin: 30px 0 30px 0;
+}
+main section#chat_see p{
+  text-align: left;
+  padding: 0 0 0 30px;
+  line-height: 1rem;
+  margin: 0 0 30px 0;
+}
+
+main section#chat_see figure{
+  text-align: left;
+}
+
+
+
+main section#chat_see figure img{
+  max-width: 400px;
+  padding: 0 0 0 30px;
+  line-height: 1rem;
+  margin: 0 0 10px 0;
+}
+
+main main#chat_say button{
+  margin: 30px 0;
+}
+
+main div#say button{
+  text-decoration: none;
+}
+
+main div#say form{
+  text-align: center;
+  margin: 30px 0 0 0;
+}
+
+main div#say form p{
+  text-align: left;
+}
+
+aside{
+
+  width: 30%;
+  padding: 50px 0 0 0;
+}
+aside h2{
+  font-size: 1.2rem;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+aside figure{
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+aside figure img{
+  width: 60%;
+  border-radius: 50%;
+}
+aside h3{
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+aside p{
+  padding: 0 10px 0 10px;
+  line-height: 1.6rem;
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: #3b7511;
+}
+footer div{
+  width: 1000px;
+  margin: auto auto auto auto;
+  padding: 0 0 0 0.55%;
+}
+
+.pc_no{
+  display: none;
+}
+
+
+
+
+
+
+/* ########### 599px以下(smartphone) ########### */
+@media (max-width: 599px) {
+
+  /* body{} */
+
+
+
+  div#wrap{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto 0 auto;
+  }
+  div#poem{
+    margin: 0 0 20px 0;
+    font-size: 2rem;
+    font-size:1.8rem;
+    line-height: 8rem;
+  }
+  main{
+    /* position: relative; */
+    width: 100%;
+    margin: 0 auto 100px auto;
+  }
+
+  main section{
+    width: 33.3333%;
+    margin: 0 0 50px 0;
+    padding: 0 20px 0 20px;
+  }
+
+  /* main section h2{
+    font-size: 1.8rem;
+  } */
+
+  /* main section p{
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  } */
+
+
+  aside{
+    width: 100%;
+    margin: 0 0 100px 0;
+  }
+  aside h3{
+    font-size: 1.4rem;
+  }
+  aside p{
+    width: 70%;
+    margin: 0 auto 0 auto;
+  }
+  aside figure img{
+    max-width: 30%;
+  }
+
+  footer div{
+    width: 100%;
+    padding: 0 0 0 20px;
+  }
+
+  /* .pc_no{
+  display: inline-block;
+  } */
+
+/* ドロワ */
+  header nav#global-nav{
+    display: none;
+  }
+
+}
+
+
+
+
+/* ########### 600px以上～768px以下(tablet) ########### */
+@media (min-width: 600px) and (max-width: 768px) {
+
+  /* body{} */
+  div#wrap{
+    display: block;
+    width: 100%;
+  }
+  main{
+    width: 100%;
+    margin: 0 auto 100px auto;
+  }
+  main section{
+    width: 50%;
+    padding: 30px 20px 30px 20px;
+  }
+
+  aside{
+    width: 100%;
+    margin: 0 0 100px 0;
+  }
+  aside h3{
+    font-size: 1.4rem;
+  }
+  aside p{
+    width: 70%;
+    margin: 0 auto 0 auto;
+  }
+  aside figure img{
+    max-width: 30%;
+  }
+  footer div{
+    width: 100%;
+    padding: 0 0 0 20px;
+  }
+
+  /* .pc_no{
+    display: inline-block;
+  } */
+
+  /*ドロワ*/
+  #nav-toggle{
+    display: none;
+  }
+
+}
+
+
+
+/* ########### 769px以上(pc) ########### */
+@media (min-width: 769px) {
+
+  /* body{} */
+  div#wrap{
+    width: 100%;
+    padding: 0 20px 0 20px;
+  }
+  footer div{
+    width: 100%;
+    padding: 0 20px 0 20px;
+  }
+  #nav-toggle{
+    display: none;
+  }
+}
+
+
+
+/* ########### 1000px以上(pc) ########### */
+@media (min-width: 1000px) {
+
+  /* body{} */
+  div#wrap{
+    /* widthの最大値を決めておく */
+    max-width: 1000px;
+  }
+  footer div{
+    max-width: 1000px;
+    box-sizing: content-box;
+  }
+  #nav-toggle{
+    display: none;
+  }
+
+}
+
+
+
+/* jQuery ページトップへ戻るボタン */
+
+#page-top {
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  font-size: 30px;
+  line-height: 0;
+  z-index: 99;
+}
+#page-top a {
+  background: #3b7511;
+  text-decoration: none;
+  color: #fff;
+  width: 60px;
+  padding: 30px 0;
+  text-align: center;
+  display: block;
+  border-radius: 50%;
+  opacity: 0.9;
+  transition: all .3s ease;
+}
+#page-top a:hover {
+  text-decoration: none;
+  opacity: .5;
+}
+
+
+
+/* ドロワメニュー */
+#nav-toggle {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  height: 32px;
+  cursor: pointer;
+
+  padding: 12px 10px 11px 10px;
+  box-sizing: content-box;
+  background-color: #222b;    /* 全体の背景部分 */
+  border-radius: 5px;
+}
+#nav-toggle > div {
+  position: relative;
+  width: 36px;
+}
+#nav-toggle span {
+  width: 100%;
+  height: 2px;
+  left: 0;
+  display: block;
+  background: #ddd;                   /* ドロワの三本線の色 */
+  position: absolute;
+  -webkit-transition: top .5s ease, -webkit-transform .6s ease-in-out;
+  transition: top .5s ease, -webkit-transform .6s ease-in-out;
+  transition: transform .6s ease-in-out, top .5s ease;
+  transition: transform .6s ease-in-out, top .5s ease, -webkit-transform .6s ease-in-out;
+}
+#nav-toggle span:nth-child(1) {
+  top: 0;
+}
+#nav-toggle span:nth-child(2) {
+  top: 14px;
+}
+#nav-toggle span:nth-child(3) {
+  top: 28px;
+}
+#nav-toggle:hover span:nth-child(1) {
+  top: 4px;
+}
+#nav-toggle:hover span:nth-child(3) {
+  top: 23px;
+}
+
+.open #nav-toggle span {
+  background: #ddd;                   /* タップした後のドロワのバッテン線の色 */
+}
+.open #nav-toggle span:nth-child(1) {
+  top: 15px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.open #nav-toggle span:nth-child(2) {
+  top: 15px;
+  width: 0;
+  left: 50%;
+}
+.open #nav-toggle span:nth-child(3) {
+  top: 15px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/* z-index */
+#nav-toggle {
+  z-index: 1000;
+}
+
+#container {
+  z-index: 900;
+}
+
+#drawer-nav {
+  background: #fffe;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 990;
+  text-align: center;
+  display: -webkit-box;
+  display: flex;
+  visibility: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  font-size: 29px;
+  opacity: 0;
+  -webkit-transition: opacity .6s ease, visibility .6s ease;
+  transition: opacity .6s ease, visibility .6s ease;
+}
+
+#drawer-nav a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  padding: 10px 0;
+  -webkit-transition: color .6s ease;
+  transition: color .6s ease;
+}
+#drawer-nav a:hover {
+  color: #666;
+}
+#drawer-nav ul {
+  list-style: none;
+}
+#drawer-nav ul li {
+  opacity: 0;
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px);
+  -webkit-transition: opacity .2s ease, -webkit-transform .6s ease;
+  transition: opacity .2s ease, -webkit-transform .6s ease;
+  transition: transform .6s ease, opacity .2s ease;
+  transition: transform .6s ease, opacity .2s ease, -webkit-transform .6s ease;
+  /* ドロワーナビの文字間隔を開ける */
+  margin: 40px 0 40px 0;
+}
+#drawer-nav ul li:nth-child(2) {
+  -webkit-transition-delay: .15s;
+          transition-delay: .15s;
+}
+#drawer-nav ul li:nth-child(3) {
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+}
+#drawer-nav ul li:nth-child(4) {
+  -webkit-transition-delay: .45s;
+          transition-delay: .45s;
+}
+#drawer-nav ul li:nth-child(5) {
+  -webkit-transition-delay: .6s;
+          transition-delay: .6s;
+}
+#drawer-nav ul li:nth-child(6) {
+  -webkit-transition-delay: .75s;
+          transition-delay: .75s;
+}
+#drawer-nav ul li:nth-child(7) {
+  -webkit-transition-delay: .9s;
+          transition-delay: .9s;
+}
+
+/* open */
+.open {
+  overflow: hidden;
+}
+.open #drawer-nav {
+  visibility: visible;
+  opacity: 1;
+}
+.open #drawer-nav li {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: opacity .9s ease, -webkit-transform 1s ease;
+  transition: opacity .9s ease, -webkit-transform 1s ease;
+  transition: transform 1s ease, opacity .9s ease;
+  transition: transform 1s ease, opacity .9s ease, -webkit-transform 1s ease;
+}

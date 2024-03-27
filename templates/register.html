@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  {%load static%}
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>My Favorite Artists</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="{% static 'common.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'reset.css' %}"> -->
+
+    <!-- jQuery本体(CDN) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+    <!-- jQuery実行ファイル -->
+    <script type="text/javascript" src="{% static 'common.js' %}"></script>
+
+  </head>
+
+  <body>
+    <!-- ヘッダ  -->
+    <header id="pageTop">
+
+      <h1>
+        My Favorite <br class="pc_no">Artists.
+      </h1>
+      
+      <nav id="global-nav">
+        <ul>
+          <li><a href="{% url 'myapp:index' %}">TOP</a></li>
+          <li><a href="{% url 'myapp:chat' %}">CHAT</a></li>
+          <li><a href="{% url 'myapp:login' %}">LOGIN</a></li>
+        </ul>
+      </nav>
+
+      <!-- ドロワメニュー -->
+      <div id="nav-toggle">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div id="drawer-nav">
+        <nav>
+          <ul>
+            <li><a href="{% url 'myapp:index' %}">TOP</a></li>
+            <li><a href="{% url 'myapp:chat' %}">CHAT</a></li>
+            <li><a href="{% url 'myapp:login' %}">LOGIN</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </header>
+
+    <div id="subtitle">
+      Please register own account.
+
+    </div>
+    <div id="wrap">
+
+      <main id="register">
+        <h2>Register</h2>   
+          
+        <div>
+          <form method="post">
+            {% csrf_token %}
+
+            <p>{{form.as_p}}</p>
+            <button type="submit">送信</button>
+          </form>
+        </div>
+
+
+
+      </main>
+    </div>
+
+
+
+    <footer>
+      <!-- footer divだけでわかるのでIDつけない -->
+      <div>
+        2022 &copy; Copyright TakumiHasegawa. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- /* jQuery ページトップへ戻るボタン */ -->
+
+    <div id="page-top">
+      <!-- 矢印っぽくする -->
+      <a href="#pageTop">▲</a>
+    </div>
+
+  </body>
+
+</html>

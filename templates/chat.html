@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  {%load static%}
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>My Favorite Artists</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{% static 'common.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'reset.css' %}"> -->
+
+    <!-- jQuery本体(CDN) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+    <!-- jQuery実行ファイル -->
+    <script type="text/javascript" src="{% static 'common.js' %}"></script>
+
+  </head>
+
+  <body>
+    <!-- ヘッダ  -->
+    <header id="pageTop">
+
+      <h1>
+        My Favorite <br class="pc_no">Artists.
+      </h1>
+      
+      <nav id="global-nav">
+        <ul>
+          <li><a href="{% url 'myapp:index' %}">TOP</a></li>
+          <li><a href="{% url 'myapp:chat' %}">CHAT</a></li>
+          <li><a href="{% url 'myapp:login' %}">LOGIN</a></li>
+        </ul>
+      </nav>
+
+      <!-- ドロワメニュー -->
+      <div id="nav-toggle">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div id="drawer-nav">
+        <nav>
+          <ul>
+            <li><a href="{% url 'myapp:index' %}">TOP</a></li>
+            <li><a href="{% url 'myapp:chat' %}">CHAT</a></li>
+            <li><a href="{% url 'myapp:login' %}">LOGIN</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </header>
+
+    <div id="subtitle">
+      Please write your favorite artists and more.
+
+    </div>
+    <div id="wrap">
+
+      <main id="chat_say">
+        <h2>Thread</h2>
+        {% for i in object_list %}   
+
+        <section id="chat_see">
+          <h3>タイトル</h3>
+          <p>{{i.title}}</p>
+          <h3>ジャンル</h3>
+          <p>{{i.genre}}</p>
+          <h3>ユーザ名</h3>
+          <p>{{i.userName}}</p>
+          <h3>コメント</h3>
+          <p>{{i.text}}</p>
+
+          <figure>
+            {% if i.img %}
+            <img src="/media/{{i.img}}" style="text-align: left;">
+            {% endif %}
+          </figure>
+
+
+        </section>
+        {% endfor %}
+
+        <button type="button"><a href="{% url 'myapp:chat_say' %}">発言する</a></button>
+        
+
+      </main>
+    </div>
+
+
+
+    <footer>
+      <!-- footer divだけでわかるのでIDつけない -->
+      <div>
+        2022 &copy; Copyright TakumiHasegawa. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- /* jQuery ページトップへ戻るボタン */ -->
+
+    <div id="page-top">
+      <!-- 矢印っぽくする -->
+      <a href="#pageTop">▲</a>
+    </div>
+
+  </body>
+
+</html>

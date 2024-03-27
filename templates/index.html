@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  {%load static%}
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>My Favorite Artists</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{% static 'common.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'reset.css' %}"> -->
+
+    <!-- jQuery本体(CDN) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+    <!-- jQuery実行ファイル -->
+    <script type="text/javascript" src="{% static 'common.js' %}"></script>
+
+  </head>
+
+  <body>
+    <!-- ヘッダ  -->
+    <header id="pageTop">
+
+      <h1>
+        My Favorite <br class="pc_no">Artists.
+      </h1>
+      
+      <nav id="global-nav">
+        <ul>
+          <li><a href="{% url 'myapp:index' %}">TOP</a></li>
+          <li><a href="{% url 'myapp:chat' %}">CHAT</a></li>
+          <li><a href="{% url 'myapp:login' %}">LOGIN</a></li>
+        </ul>
+      </nav>
+
+      <!-- ドロワメニュー -->
+      <div id="nav-toggle">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div id="drawer-nav">
+        <nav>
+          <ul>
+            <li><a href="{% url 'myapp:index' %}">TOP</a></li>
+            <li><a href="{% url 'myapp:chat' %}">CHAT</a></li>
+            <li><a href="{% url 'myapp:login' %}">LOGIN</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </header>
+
+    <div id="subtitle">
+      These are my favorite!
+
+    </div>
+    <div id="wrap">
+
+      <main id="top">
+        
+        <!-- sectionを使う場合は、必ず初めに<h～>属性でタイトルを付ける -->
+        <section>
+          <h2>
+            Pop Smoke
+          </h2>
+
+          <figure>
+            <a href="https://hiphopdna.jp/tag/%E3%83%9D%E3%83%83%E3%83%97%E3%83%BB%E3%82%B9%E3%83%A2%E3%83%BC%E3%82%AF" target="_blank"><img src="{% static 'image/popsmoke.jpg' %}" alt="Pop Smoke"></a>
+          </figure>
+
+          <p>
+            アメリカはブルックリン出身のラッパー。<br>
+            「<a href="https://youtu.be/oorVWW9ywG0" target="_blank">Dior</a>」などのヒットで知られており、
+            2010年代末のブルックリン・ドリルを代表するアーティスト。<br>
+            天才的な才能で次々に曲を製作するが、2021年に強盗目的の若者に殺害されてしまう。<br>
+            天才の寿命は短い。
+          </p>
+
+        </section>
+
+
+
+        <section>
+          <h2>
+            Bobby Shmurda
+          </h2>
+
+          <figure>
+            <a href="https://hiphopdna.jp/tag/bobby-shmurda" target="_blank"><img src="{% static 'image/bobbyshumurda.jpg' %}" alt="Pop Smoke"></a>
+          </figure>
+
+          <p>
+            同じくブルックリン出身のラッパー。<br>
+            2014年にドロップした、「<a href="https://youtu.be/vJwKKKd2ZYE" target="_blank">Hot N**ga</a>」が大ブームを起こし、
+            ビルボードで6位にまで到達したが、殺*陰謀・武器
+            不法所持等の罪で逮捕されてしまう。<br>
+            しかし2021年4月に保釈され、「<a href="https://youtu.be/vJwKKKd2ZYE" target="_blank">No Time For Sleep</a>」をリリース。
+          </p>
+
+        </section>
+
+        <section>
+          <h2>
+            Young Thug
+          </h2>
+
+          <figure>
+            <a href="https://hiphopdna.jp/?s=young+thug" target="_blank"><img src="{% static 'image/youngthug.jpg' %}" alt="Pop Smoke"></a>
+          </figure>
+
+          <p>
+            出身は、アメリカ・アトランタ。<br>
+            2011年頃から自身の活動を開始する。
+            2015年に発表された「<a href="https://youtu.be/p0x6FEDV-ig" target="_blank">Barter6</a>」など、多くの
+            作品を世に出している。<br>
+            自身のレーベルYSL(Young Stoner Life)を立ち上げ、
+            現在まで活動を継続しているが、ギャングとの関係性を疑われ現在裁判中である。
+            
+          </p>
+
+        </section>
+
+        <section>
+          <h2>
+            SugLawd Familiar
+          </h2>
+
+          <figure>
+            <a href="https://music.tower.jp/artist/detail/2001368054" target="_blank"><img src="{% static 'image/suglawd.jpg' %}" alt="Pop Smoke"></a>
+          </figure>
+
+          <p>
+            沖縄県出身の国産アーティスト。<br>
+            高校生時代にリリースした「<a href="https://youtu.be/iO2-QgebNhs" target="_blank">Longiness</a>」は現在では1400万再生以上を達成。<br>
+            最近では「<a href="https://youtu.be/egJiI6w82dg" target="_blank">THE FIRST TAKE</a>」にも出演するなど、今後の活動においても注目すべきアーティストである。
+          </p>
+
+        </section>
+ 
+
+        <section>
+          <h2>
+            Nobody Knows+
+          </h2>
+
+          <figure>
+            <a href="https://nobodyknows-fc.com/" target="_blank"><img src="{% static 'image/NobodyKnows.jpg' %}" alt="Pop Smoke"></a>
+          </figure>
+
+          <p>
+            我らが名古屋出身のアーティスト。1999年に結成。<br>
+            こちらも「THE FIRST TAKE」で取り上げられた「<a href="https://youtu.be/XaVPr6HVrbI" target="_blank">ココロオドル</a>」を始め、
+            MODE学園のCMソングでもあった「<a href="https://youtu.be/kH7Rb6p1NX0" target="_blank">エル・ミラドール～展望台の唄～</a>」も手がけている。<br>
+            アニメ・NARUTOの主題歌「<a href="https://youtu.be/ipBCtl0j4O8" target="_blank">Hero's come back!!</a>」なども有名。<br>
+            私の昔から大好きなアーティストです。
+          </p>
+
+        </section>
+
+        <section>
+          <h2>
+            RYKEY DADDY DIRTY
+          </h2>
+
+          <figure>
+            <a href="https://rykeydaddydirty.com/" target="_blank"><img src="{% static 'image/Rykey.png' %}" alt="Pop Smoke"></a>
+          </figure>
+
+          <p>
+            MZEE団長ことRYKEY DADDY DIRTYは東京都八王子出身。<br>
+            日本人の父とケニア人の母を持つハーフであり、17歳頃にラップ活動を開始。<br>
+            草刈正雄の娘、紅蘭と事実婚状態であったが解消される。<br>
+            楽曲では、「<a href="https://youtu.be/k7n4_nWJ8HY" target="_blank">Baby</a>」や「<a href="https://youtu.be/6r8I4IZAma0" target="_blank">ALL GODS BLESS ME</a>」など、自身の生い立ちや苦しみを分りやすく表現するようなラップが持ち味。
+          </p>
+
+        </section>
+
+        
+
+
+      </main>
+
+
+
+      <aside>
+        <h2>作者紹介</h2>
+        <figure>
+          <img src="{% static 'image/myself.jpg' %}" alt="長谷川匠">
+        </figure>
+        <h3>
+          IT51A203 長谷川匠
+        </h3>
+        <p>
+          自己紹介：入学前はクラブでDJをよくしていました！
+          HIPHOP音楽が大好きです！<br>
+          たまにDTMもやります！<br>
+          あなたはどんなジャンルの音楽が好きですか？<br>
+          ヒップホップ、レゲエなど好きな方、ぜひ繋がりましょう！お気軽にTeamsまでご連絡下さい。<br>
+          もしくは、nhs25002@nhs.hal.ac.jpまで！
+        </p>
+      </aside>
+
+    </div>
+
+
+
+    <footer>
+      <div>
+        2022 &copy; Copyright TakumiHasegawa. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- /* jQuery ページトップへ戻るボタン */ -->
+
+    <div id="page-top">
+      <!-- 矢印っぽくする -->
+      <a href="#pageTop">▲</a>
+    </div>
+
+  </body>
+
+</html>
